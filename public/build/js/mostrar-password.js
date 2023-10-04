@@ -1,0 +1,1 @@
+function mostrarCaracteres(t){var e=document.getElementById("password");e.type="text",clearTimeout(e.timeoutID),e.timeoutID=setTimeout((function(){e.type="password"}),200)}var campoPassword=document.getElementById("password");campoPassword.addEventListener("keydown",(function(t){mostrarCaracteres(t.target)}));

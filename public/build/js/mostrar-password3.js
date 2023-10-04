@@ -1,0 +1,1 @@
+function mostrarCaracteres3(t){var e=document.getElementById("password3");e.type="text",clearTimeout(e.timeoutID),e.timeoutID=setTimeout((function(){e.type="password"}),500)}

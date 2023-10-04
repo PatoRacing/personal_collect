@@ -1,0 +1,47 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.formulario {
+    margin-top: 3rem;
+    
+    .campo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        label {
+            flex: 0 0 10rem;
+        }
+
+        input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            color: v.$gris;
+            background-color: lighten(v.$gris, 40%);
+            #usuarios_id {
+                background-color: v.$negro;
+            } 
+        }
+
+        select {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            color: v.$gris;
+            background-color: v.$blanco;
+        }      
+    }
+}
+
+#usuarios_id[readonly] {
+    background-color: rgb(217, 217, 217);
+    color: v.$negro;
+}
+
+#usuario_id, #deudor_id[readonly] {
+    background-color: rgb(217, 217, 217);
+    color: v.$negro;
+}
+

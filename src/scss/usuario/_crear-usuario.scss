@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.contenedor-usuario {
+    
+    .formulario {
+        input:not([type="submit"]) {
+            background-color: v.$blanco;
+        }
+
+        input[type='submit'] {
+            margin-top: 3rem;
+            @include m.boton (v.$azul, v.$blanco);
+        }
+    }
+}

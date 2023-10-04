@@ -1,0 +1,1 @@
+"undefined"!=typeof $confirmarImportacion&&!0===$confirmarImportacion&&Swal.fire({title:"Confirmar importación",text:"¿Estás seguro de que deseas importar el archivo?",icon:"warning",showCancelButton:!0,confirmButtonText:"Sí, importar",cancelButtonText:"Cancelar"}).then(o=>{o.isConfirmed&&document.querySelector(".formulario").submit()});

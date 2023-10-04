@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.auth {
+    padding-top: 10rem;
+    .personal-collect {
+        display: block;
+        margin: 0 auto;
+        @include m.tablet {
+            padding-top: 5rem;
+            
+        }
+    }
+    input[type='submit'] {
+        margin-top: 3rem;
+        @include m.boton (v.$azul, v.$blanco);
+    }
+
+    .acciones {
+
+        margin-top: 3rem;
+        
+        a{
+            color: v.$azul;
+        }
+    }
+
+}

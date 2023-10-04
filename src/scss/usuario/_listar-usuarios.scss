@@ -1,0 +1,157 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-boton-agregar-usuario {
+    margin-bottom: 2rem;
+    a {
+        background-color: v.$azul;
+        padding: 1rem 1rem;
+        color: v.$blanco;
+    }
+  }
+
+  .contenedor-boton-editar-situacion-operacion {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    a {
+        background-color: v.$azul;
+        padding: 1rem 1rem;
+        color: v.$blanco;
+    }
+  }
+
+
+
+  .contenedor-listar-usuarios {
+    .buscador {
+        padding: 1rem;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+    .table {
+        
+        @include m.tablet {
+            table-layout: fixed;
+        }
+        width: 100%;
+        border-collapse: collapse;
+    
+        &__thead {
+            
+            background-color: v.$grisOscuro;
+            color: v.$blanco;
+        }
+    
+    
+        &__th {
+            
+            padding: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: v.$regular;
+
+            &--acciones {
+                text-transform: uppercase;
+                font-weight: v.$regular;
+            }
+        }
+    
+        &__tr {
+            
+            &:nth-child(even) {
+                background: lighten(v.$grisOscuro, 50%)
+            }
+            
+        }
+    
+        &__td {
+            text-align: center;
+            padding: 1.5rem 1rem;
+
+            &--documento {
+                padding: 1.5rem 1rem; 
+            }
+
+            &--cliente {
+                padding: 1.5rem 1rem; 
+            }
+    
+            &--acciones {
+                @extend .table__td;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+                align-items: center;
+    
+            }
+            &--operacion {
+                text-align: center;
+            }
+            &--dni {
+                text-align: center;
+            }
+            &--cliente {
+                text-align: center;
+            }
+
+            &--nombre {
+                cursor: pointer;
+                a {
+                    display: block;
+                    margin-left: 1rem;
+                    color: v.$negro;
+                    font-weight: 600;
+                }
+            }
+        }
+    
+        &__accion {
+            all: unset;
+            
+    
+            &--editar {
+                color: v.$negro;
+            }
+    
+            &--eliminar {
+                color: v.$rojo;
+            }
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+  }
+
+  .inactivo {
+    color: v.$rojo;
+    .table__td--nombre,  .table__td--acciones {
+        
+        a {
+           color: v.$rojo;
+        }
+    }
+  }
+
+  .contenedor-boton-importar-cartera {
+    @extend .contenedor-boton-agregar-usuario;
+    a {
+            background-color: v.$verde;
+        }
+    }
+
+    .contenedor-boton-nueva-gestion-deudor {
+        @extend .contenedor-boton-agregar-usuario;
+        a {
+                background-color: v.$indigo;
+            }
+        }
+  
+#fila {
+    &:nth-child(even) {
+        background: lighten(v.$grisOscuro, 50%)
+    }
+}
+  

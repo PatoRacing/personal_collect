@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector("#search"),t=document.querySelector("#tabla-search").querySelectorAll("tbody tr");e.addEventListener("input",(function(){const n=e.value.trim().toLowerCase();t.forEach(e=>{e.textContent.toLowerCase().includes(n)?e.style.display="table-row":e.style.display="none"})}))}));

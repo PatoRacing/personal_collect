@@ -1,0 +1,44 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedor-perfil-usuario {
+
+    .descripcion-situacion {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        background-color: v.$verde;
+        color: v.$blanco;
+        font-size: 2rem;
+        span{
+            font-weight: v.$bold;
+            text-transform: uppercase;
+        }
+    }
+    .situacion-rojo {
+        background-color: v.$rojo;
+    }
+    
+    
+    h3 {
+        text-align: center;
+        color: v.$azul;
+        font-size: 3rem;
+        border-top: 1px solid rgb(204, 204, 204);
+        padding-top: 2rem;
+    }
+
+    .contenedor-datos-usuario {
+        padding-bottom: 2rem;
+        color: v.$negro;
+        
+       span {
+        font-weight: v.$bold;
+       }
+       @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+       }
+    }
+}
+
